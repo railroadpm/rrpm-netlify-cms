@@ -136,7 +136,7 @@ export default class GitLab {
 
   traverseCursor(cursor, action) {
     return this.api.traverseCursor(cursor, action)
-      .then(async ({ entries, cursor: newCursor }) => console.log({ entries, newCursor }) || ({
+      .then(async ({ entries, cursor: newCursor }) => ({
         entries: await Promise.all(entries.map(file => this.api.readFile(file.path, file.id).then(data => ({ file, data })))),
         cursor: newCursor,
       }));
