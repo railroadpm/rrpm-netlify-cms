@@ -11,7 +11,9 @@ const Entries = ({
   page,
   onPaginate,
   isFetching,
-  viewStyle
+  viewStyle,
+  cursorActions,
+  cursorMeta,
 }) => {
   const loadingMessages = [
     'Loading Entries',
@@ -25,9 +27,9 @@ const Entries = ({
         collections={collections}
         entries={entries}
         publicFolder={publicFolder}
-        page={page}
-        onPaginate={onPaginate}
         viewStyle={viewStyle}
+        cursorActions={cursorActions}
+        cursorMeta={cursorMeta}
       />
     );
   }

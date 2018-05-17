@@ -1,4 +1,4 @@
-import { List } from 'immutable';
+import { fromJS, List } from 'immutable';
 import { actions as notifActions } from 'redux-notifications';
 import { serializeValues } from 'Lib/serializeEntryValues';
 import { currentBackend } from 'Backends/backend';
@@ -83,13 +83,14 @@ export function entriesLoading(collection) {
   };
 }
 
-export function entriesLoaded(collection, entries, pagination, cursor = null) {
+export function entriesLoaded(collection, entries, pagination, cursor = null, append = true) {
   return {
     type: ENTRIES_SUCCESS,
     payload: {
       collection: collection.get('name'),
       entries,
       page: pagination,
+      append,
       // If the backend returns a cursor, we add it to the action. It
       // will be processed by the `cursors` reducer.
       ...(cursor ? { cursor } : {})
@@ -244,6 +245,20 @@ export function loadEntry(collection, slug) {
   };
 }
 
+const appendActions = fromJS({
+  ["append_next"]: { action: "next", append: true },
+});
+
+const addAppendActionsToCursor = cursor => cursor && ({
+  ...cursor,
+  actions: [
+    ...cursor.actions,
+    ...appendActions
+      .filter(v => cursor.actions.includes(v.get('action')))
+      .keySeq().toList().toJS(),
+  ]
+});
+
 export function loadEntries(collection, page = 0) {
   return (dispatch, getState) => {
     if (collection.get('isFetching')) {
@@ -253,6 +268,7 @@ export function loadEntries(collection, page = 0) {
     const backend = currentBackend(state.config);
     const integration = selectIntegration(state, collection.get('name'), 'listEntries');
     const provider = integration ? getIntegrationProvider(state.integrations, backend.getToken, integration) : backend;
+    const append = !!(page && !isNaN(page) && page > 0);
     dispatch(entriesLoading(collection));
     provider.listEntries(collection, page)
     // Validate the cursor if it exists to ensure it has the correct
@@ -260,7 +276,13 @@ export function loadEntries(collection, page = 0) {
     .then(response => ((!response.cursor) || validateCursor(response.cursor)
       ? response
       : Promise.reject(invalidCursorError(response.cursor))))
-    .then(response => dispatch(entriesLoaded(collection, response.entries.reverse(), response.pagination, response.cursor)))
+    .then(response => dispatch(entriesLoaded(
+      collection,
+      response.entries.reverse(),
+      response.pagination,
+      addAppendActionsToCursor(response.cursor),
+      append,
+    )))
     .catch(err => {
       dispatch(notifSend({
         message: `Failed to load entries: ${ err }`,
@@ -270,6 +292,51 @@ export function loadEntries(collection, page = 0) {
       return Promise.reject(dispatch(entriesFailed(collection, err)));
     });
   };
+}
+
+function traverseCursor(backend, cursor, action) {
+  if (!cursor) {
+    throw new Error("No cursor exists");
+  }
+  if (!validateCursor(cursor)) {
+    throw new invalidCursorError(cursor);
+  }
+  if (!cursor.actions.includes(action)) {
+    throw new Error(`The current cursor does not support the pagination action "${ action }".`);
+  }
+  return backend.traverseCursor(cursor, action);
+}
+
+export function traverseCollectionCursor(collection, action) {
+  return async (dispatch, getState) => {
+    const state = getState();
+    if (state.entries.getIn(['pages', `${ collection.get('name') }`, 'isFetching',])) {
+      return;
+    }
+    const backend = currentBackend(state.config);
+
+    const { action: realAction, append } = appendActions.has(action)
+      ? appendActions.get(action).toJS()
+      : { action, append: false };
+
+    try {
+      const cursor = state.cursors.get(collectionEntriesCursorKey(collection.get('name')));
+      dispatch(entriesLoading(collection));
+
+      const { entries, cursor: newCursor } = await traverseCursor(backend, cursor, realAction);
+      // Pass null for the old pagination argument - this will
+      // eventually be removed.
+      return dispatch(entriesLoaded(collection, entries, null, addAppendActionsToCursor(newCursor), append));
+    } catch (err) {
+      console.error(err);
+      dispatch(notifSend({
+        message: `Failed to persist entry: ${ err }`,
+        kind: 'danger',
+        dismissAfter: 8000,
+      }));
+      return Promise.reject(dispatch(entriesFailed(collection, err)));
+    }
+  }
 }
 
 export function createEmptyDraft(collection) {

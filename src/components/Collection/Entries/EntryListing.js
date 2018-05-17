@@ -20,7 +20,12 @@ export default class EntryListing extends React.Component {
   };
 
   handleLoadMore = () => {
-    this.props.onPaginate(this.props.page + 1);
+    const { cursorActions } = this.props;
+    const { append_next: appendNext } = (cursorActions || {});
+
+    if (cursorActions && appendNext) {
+      appendNext();
+    }
   };
 
   inferFields = collection => {
@@ -53,7 +58,7 @@ export default class EntryListing extends React.Component {
   };
 
   render() {
-    const { collections, entries, publicFolder } = this.props;
+    const { collections } = this.props;
 
     return (
       <div>
