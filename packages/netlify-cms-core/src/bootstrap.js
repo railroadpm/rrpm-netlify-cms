@@ -23,7 +23,7 @@ function bootstrap(opts = {}) {
    * Log the version number.
    */
   if (NETLIFY_CMS_VERSION) {
-    console.log(`netlify-cms ${NETLIFY_CMS_VERSION}`);
+    console.log(`@rrpm/netlify-cms ${NETLIFY_CMS_VERSION}`);
   } else if (NETLIFY_CMS_CORE_VERSION) {
     console.log(`netlify-cms-core ${NETLIFY_CMS_CORE_VERSION}`);
   }

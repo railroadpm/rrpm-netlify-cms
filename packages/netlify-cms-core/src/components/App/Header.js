@@ -137,11 +137,12 @@ class Header extends React.Component {
 
     return (
       <AppHeaderContainer>
-        <AppHeader>
-          <AppHeaderContent>
+        <AppHeader className="nc-app-header">
+          <AppHeaderContent className="nc-app-header-content">
             <nav>
               <AppHeaderNavLink
                 to="/"
+                className = "nc-app-header-nav-link"
                 activeClassName="header-link-active"
                 isActive={(match, location) => location.pathname.startsWith('/collections/')}
               >
@@ -155,13 +156,13 @@ class Header extends React.Component {
                 </AppHeaderNavLink>
               ) : null}
               {showMediaButton ? (
-                <AppHeaderButton onClick={openMediaLibrary}>
+                <AppHeaderButton onClick={openMediaLibrary} className="nc-app-header-btn">
                   <Icon type="media-alt" />
                   {t('app.header.media')}
                 </AppHeaderButton>
               ) : null}
             </nav>
-            <AppHeaderActions>
+            <AppHeaderActions className="nc-app-header-actions">
               {createableCollections.size > 0 && (
                 <Dropdown
                   renderButton={() => (
@@ -181,6 +182,7 @@ class Header extends React.Component {
                 </Dropdown>
               )}
               <SettingsDropdown
+                className = "nc-app-header-actions-dropdown"
                 displayUrl={displayUrl}
                 imageUrl={user.get('avatar_url')}
                 onLogoutClick={onLogoutClick}
