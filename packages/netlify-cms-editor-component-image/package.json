@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-editor-component-image",
   "description": "Image component for Netlify CMS editor widget",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-editor-component-image",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-editor-component-image.js",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-editor-component-image/compare/@rrpm/netlify-cms-editor-component-image@2.0.5...@rrpm/netlify-cms-editor-component-image@2.0.6) (2018-11-19)
+
+**Note:** Version bump only for package @rrpm/netlify-cms-editor-component-image
+
+
+
+
+
 ## 2.0.5 (2018-11-19)
 
 **Note:** Version bump only for package @rrpm/netlify-cms-editor-component-image

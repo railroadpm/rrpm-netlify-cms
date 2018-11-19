@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-backend-bitbucket",
   "description": "Bitbucket backend for Netlify CMS",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-backend-bitbucket.js",

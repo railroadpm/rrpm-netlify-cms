@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-ui-default",
   "description": "Default UI components for Netlify CMS.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-ui-default",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "license": "MIT",

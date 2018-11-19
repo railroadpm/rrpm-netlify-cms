@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-media-library-uploadcare",
   "description": "Uploadcare integration for Netlify CMS",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-media-library-uploadcare",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-media-library-uploadcare.js",

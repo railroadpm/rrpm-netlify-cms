@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-widget-file",
   "description": "Widget for uploading files in Netlify CMS.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "homepage": "https://www.netlifycms.org/docs/widgets/#file",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-file",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
