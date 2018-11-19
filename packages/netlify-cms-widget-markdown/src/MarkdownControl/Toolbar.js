@@ -10,7 +10,7 @@ import {
   DropdownButton,
   colors,
   transitions,
-} from 'netlify-cms-ui-default';
+} from '@rrpm/netlify-cms-ui-default';
 import ToolbarButton from './ToolbarButton';
 
 const ToolbarContainer = styled.div`

@@ -1,5 +1,5 @@
 {
-  "name": "netlify-cms-site",
+  "name": "@rrpm/netlify-cms-site",
   "version": "1.0.0",
   "description": "Netlify CMS documentation website built with Gatsby",
   "scripts": {

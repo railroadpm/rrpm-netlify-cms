@@ -1,10 +1,10 @@
 {
-  "name": "netlify-cms-widget-file",
+  "name": "@rrpm/netlify-cms-widget-file",
   "description": "Widget for uploading files in Netlify CMS.",
   "version": "2.1.0",
   "homepage": "https://www.netlifycms.org/docs/widgets/#file",
-  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-file",
-  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-file",
+  "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-widget-file.js",
   "license": "MIT",
   "keywords": [
@@ -32,7 +32,7 @@
   "peerDependencies": {
     "emotion": "^9.2.6",
     "immutable": "^3.7.6",
-    "netlify-cms-ui-default": "^2.0.0",
+    "@rrpm/netlify-cms-ui-default": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.4.1",
     "react-emotion": "^9.2.6",

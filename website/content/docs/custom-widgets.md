@@ -24,7 +24,7 @@ Register a custom widget.
 CMS.registerWidget(name, control, [preview]);
 
 // Using npm module import
-import CMS from 'netlify-cms';
+import CMS from '@rrpm/netlify-cms';
 CMS.registerWidget(name, control, [preview]);
 ```
 

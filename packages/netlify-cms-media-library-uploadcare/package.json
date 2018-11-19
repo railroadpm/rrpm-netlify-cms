@@ -1,9 +1,9 @@
 {
-  "name": "netlify-cms-media-library-uploadcare",
+  "name": "@rrpm/netlify-cms-media-library-uploadcare",
   "description": "Uploadcare integration for Netlify CMS",
   "version": "0.2.1",
-  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-media-library-uploadcare",
-  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-media-library-uploadcare",
+  "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-media-library-uploadcare.js",
   "license": "MIT",
   "keywords": [
@@ -27,6 +27,6 @@
     "webpack-cli": "^3.1.0"
   },
   "peerDependencies": {
-    "netlify-cms-lib-util": "^2.0.4"
+    "@rrpm/netlify-cms-lib-util": "^2.0.4"
   }
 }

@@ -1,10 +1,10 @@
 import GoTrue from 'gotrue-js';
 import jwtDecode from 'jwt-decode';
 import { get, pick, intersection } from 'lodash';
-import { APIError, unsentRequest } from 'netlify-cms-lib-util';
-import { GitHubBackend } from 'netlify-cms-backend-github';
-import { GitLabBackend } from 'netlify-cms-backend-gitlab';
-import { BitBucketBackend, API as BitBucketAPI } from 'netlify-cms-backend-bitbucket';
+import { APIError, unsentRequest } from '@rrpm/netlify-cms-lib-util';
+import { GitHubBackend } from '@rrpm/netlify-cms-backend-github';
+import { GitLabBackend } from '@rrpm/netlify-cms-backend-gitlab';
+import { BitBucketBackend, API as BitBucketAPI } from '@rrpm/netlify-cms-backend-bitbucket';
 import GitHubAPI from './GitHubAPI';
 import GitLabAPI from './GitLabAPI';
 import AuthenticationPage from './AuthenticationPage';

@@ -1,10 +1,10 @@
 {
-  "name": "netlify-cms-widget-markdown",
+  "name": "@rrpm/netlify-cms-widget-markdown",
   "description": "Widget for editing markdown in Netlify CMS.",
   "version": "2.0.9",
   "homepage": "https://www.netlifycms.org/docs/widgets/#markdown",
-  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-markdown",
-  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown",
+  "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-widget-markdown.js",
   "license": "MIT",
   "keywords": [
@@ -49,7 +49,7 @@
     "emotion": "^9.2.6",
     "immutable": "^3.7.6",
     "lodash": "^4.17.10",
-    "netlify-cms-ui-default": "^2.0.0",
+    "@rrpm/netlify-cms-ui-default": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.4.1",
     "react-dom": "^16.0.0",

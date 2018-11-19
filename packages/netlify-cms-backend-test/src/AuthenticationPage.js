@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import styled from 'react-emotion';
-import { Icon, buttons, shadows } from 'netlify-cms-ui-default';
+import { Icon, buttons, shadows } from '@rrpm/netlify-cms-ui-default';
 
 const StyledAuthenticationPage = styled.section`
   display: flex;

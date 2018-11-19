@@ -1,5 +1,5 @@
 import { css } from 'react-emotion';
-import { colors, lengths, fonts } from 'netlify-cms-ui-default';
+import { colors, lengths, fonts } from '@rrpm/netlify-cms-ui-default';
 import { editorStyleVars } from '../styles';
 
 export default css`

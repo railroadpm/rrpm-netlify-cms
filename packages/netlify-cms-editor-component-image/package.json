@@ -1,9 +1,9 @@
 {
-  "name": "netlify-cms-editor-component-image",
+  "name": "@rrpm/netlify-cms-editor-component-image",
   "description": "Image component for Netlify CMS editor widget",
   "version": "2.0.4",
-  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-editor-component-image",
-  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-editor-component-image",
+  "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-editor-component-image.js",
   "license": "MIT",
   "keywords": [

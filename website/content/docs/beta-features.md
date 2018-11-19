@@ -25,7 +25,7 @@ Assuming you have the netlify-cms package installed to your project, manual init
 window.CMS_MANUAL_INIT = true
 
 // Usage with import from npm package
-import CMS, { init } from 'netlify-cms'
+import CMS, { init } from '@rrpm/netlify-cms'
 
 // Usage with script tag
 const { CMS, initCMS: init } = window
@@ -68,7 +68,7 @@ CMS.registerPreviewTemplate(...);
  * Assumes a webpack project with `sass-loader` and `css-loader` installed.
  * Takes advantage of the `toString` method in the return value of `css-loader`.
  */
-import CMS from 'netlify-cms';
+import CMS from '@rrpm/netlify-cms';
 import styles from '!css-loader!sass-loader!../main.scss'
 
 CMS.registerPreviewStyle(styles.toString(), { raw: true })

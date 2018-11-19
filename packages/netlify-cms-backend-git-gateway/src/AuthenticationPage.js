@@ -10,7 +10,7 @@ import {
   colors,
   colorsRaw,
   lengths,
-} from 'netlify-cms-ui-default';
+} from '@rrpm/netlify-cms-ui-default';
 
 const LoginButton = styled.button`
   ${buttons.button};

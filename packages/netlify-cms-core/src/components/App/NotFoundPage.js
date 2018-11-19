@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { translate } from 'react-polyglot';
-import { lengths } from 'netlify-cms-ui-default';
+import { lengths } from '@rrpm/netlify-cms-ui-default';
 import PropTypes from 'prop-types';
 
 const NotFoundContainer = styled.div`

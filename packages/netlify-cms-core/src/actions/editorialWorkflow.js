@@ -6,7 +6,7 @@ import { currentBackend } from 'src/backend';
 import { getAsset } from 'Reducers';
 import { selectFields } from 'Reducers/collections';
 import { EDITORIAL_WORKFLOW } from 'Constants/publishModes';
-import { EditorialWorkflowError } from 'netlify-cms-lib-util';
+import { EditorialWorkflowError } from '@rrpm/netlify-cms-lib-util';
 import { loadEntry } from './entries';
 import ValidationErrorTypes from 'Constants/validationErrorTypes';
 

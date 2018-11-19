@@ -4,7 +4,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import styled from 'react-emotion';
 import { List } from 'immutable';
 import uuid from 'uuid/v4';
-import { lengths, components, buttons } from 'netlify-cms-ui-default';
+import { lengths, components, buttons } from '@rrpm/netlify-cms-ui-default';
 
 const MAX_DISPLAY_LENGTH = 50;
 

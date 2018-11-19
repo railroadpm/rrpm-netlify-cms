@@ -1,10 +1,10 @@
 {
-  "name": "netlify-cms-widget-number",
+  "name": "@rrpm/netlify-cms-widget-number",
   "description": "Widget for editing numberic values in Netlify CMS.",
   "version": "2.0.5",
   "homepage": "https://www.netlifycms.org/docs/widgets/#number",
-  "repository": "https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-number",
-  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-number",
+  "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-widget-number.js",
   "license": "MIT",
   "keywords": [
@@ -26,7 +26,7 @@
   },
   "peerDependencies": {
     "emotion": "^9.2.6",
-    "netlify-cms-ui-default": "^2.0.0",
+    "@rrpm/netlify-cms-ui-default": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.4.1"
   }
