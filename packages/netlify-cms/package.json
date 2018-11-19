@@ -20,6 +20,9 @@
     "jamstack"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@rrpm/netlify-cms-backend-bitbucket": "^2.1.1",
     "@rrpm/netlify-cms-backend-git-gateway": "^2.1.1",

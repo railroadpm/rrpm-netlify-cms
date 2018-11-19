@@ -18,6 +18,9 @@
     "core"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@rrpm/netlify-cms-editor-component-image": "^2.0.5",
     "@rrpm/netlify-cms-lib-auth": "^2.0.6",

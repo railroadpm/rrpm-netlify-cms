@@ -5,6 +5,9 @@
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-gitlab",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/netlify-cms-backend-gitlab.js",
   "keywords": [
     "netlify",

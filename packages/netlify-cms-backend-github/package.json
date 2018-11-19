@@ -3,6 +3,9 @@
   "description": "GitHub backend for Netlify CMS",
   "version": "2.1.1",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-backend-github.js",

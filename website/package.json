@@ -12,6 +12,9 @@
   "author": "",
   "homepage": "https://www.netlifycms.org/",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
     "dayjs": "^1.7.5",
