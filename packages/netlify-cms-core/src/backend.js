@@ -192,9 +192,9 @@ class Backend {
         loadedEntry.file.path,
         { raw: loadedEntry.data || '', label: loadedEntry.file.label },
       ),
-    ).sort((a, b) => {
-      if (a.slug < b.slug) return -1;
-      if (a.slug > b.slug) return 1;
+    ).sort((a, b) => {  // Change default sort order to descending by slug
+      if (a.slug > b.slug) return -1;
+      if (a.slug < b.slug) return 1;
       return 0;
     });
     const formattedEntries = entries.map(this.entryWithFormat(collection));
