@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.6 (2018-11-19)
+
+
+### Bug Fixes
+
+* **relation:** fix relation widget selection bug ([#1572](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-relation/issues/1572)) ([77fbc04](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-relation/commit/77fbc04))
+
+
+
+
+
 <a name="2.0.5"></a>
 ## [2.0.5](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-relation/compare/netlify-cms-widget-relation@2.0.4...netlify-cms-widget-relation@2.0.5) (2018-08-24)
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.1 (2018-11-19)
+
+
+### Bug Fixes
+
+* **bitbucket:** fix rebasing mistakes in bitbucket backend and deps ([#1522](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/issues/1522)) ([bdfd944](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/commit/bdfd944))
+* **git-gateway:** correct `proxied` value for proxied backends ([#1540](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/issues/1540)) ([f7dba87](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/commit/f7dba87))
+* **git-gateway:** pass options through git-gateway backend ([#1532](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/issues/1532)) ([4c5436a](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/commit/4c5436a))
+* **identity:** switch user name reference to full_name ([#1809](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/issues/1809)) ([55d45a8](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/commit/55d45a8))
+* **workflow:** fix workflow entries not appearing ([#1581](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/issues/1581)) ([95c8de0](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/commit/95c8de0))
+
+
+### Features
+
+* allow custom logo on auth page ([#1818](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/issues/1818)) ([c6ae1e8](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/commit/c6ae1e8))
+
+
+
+
+
 # [2.1.0](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/compare/netlify-cms-backend-git-gateway@2.0.8...netlify-cms-backend-git-gateway@2.1.0) (2018-11-12)
 
 

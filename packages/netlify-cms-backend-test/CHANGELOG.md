@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.7 (2018-11-19)
+
+
+### Bug Fixes
+
+* **backends:** fix commit message handling ([#1568](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-test/issues/1568)) ([f7e7120](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-test/commit/f7e7120))
+* **workflow:** enable workflow per method ([#1569](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-test/issues/1569)) ([90b8156](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-test/commit/90b8156))
+* **workflow:** fix status not set on new workflow entries ([#1558](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-test/issues/1558)) ([0aa085f](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-test/commit/0aa085f))
+
+
+
+
+
 <a name="2.0.6"></a>
 ## [2.0.6](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-backend-test/compare/netlify-cms-backend-test@2.0.5...netlify-cms-backend-test@2.0.6) (2018-08-24)
 

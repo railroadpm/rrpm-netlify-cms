@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.1 (2018-11-19)
+
+
+### Bug Fixes
+
+* **backends:** fix commit message handling ([#1568](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/issues/1568)) ([f7e7120](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/commit/f7e7120))
+* **bitbucket:** fix rebasing mistakes in bitbucket backend and deps ([#1522](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/issues/1522)) ([bdfd944](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/commit/bdfd944))
+* **bitbucket:** setting site_id for BitBucket auth ([#1660](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/issues/1660)) ([d139ac4](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/commit/d139ac4))
+* **gitlab:** fetch media library images through API ([#1433](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/issues/1433)) ([83d2adc](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/commit/83d2adc))
+
+
+### Features
+
+* allow custom logo on auth page ([#1818](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/issues/1818)) ([c6ae1e8](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/commit/c6ae1e8))
+
+
+
+
+
 # [2.1.0](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-backend-bitbucket/compare/netlify-cms-backend-bitbucket@2.0.7...netlify-cms-backend-bitbucket@2.1.0) (2018-11-12)
 
 

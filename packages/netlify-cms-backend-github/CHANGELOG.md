@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.1 (2018-11-19)
+
+
+### Bug Fixes
+
+* **backends:** fix commit message handling ([#1568](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/issues/1568)) ([f7e7120](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/commit/f7e7120))
+* **github:** fix image uploading ([#1561](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/issues/1561)) ([ddc8f04](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/commit/ddc8f04))
+* **workflow:** enable workflow per method ([#1569](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/issues/1569)) ([90b8156](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/commit/90b8156))
+* **workflow:** fix status not set on new workflow entries ([#1558](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/issues/1558)) ([0aa085f](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/commit/0aa085f))
+
+
+### Features
+
+* allow custom logo on auth page ([#1818](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/issues/1818)) ([c6ae1e8](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-github/commit/c6ae1e8))
+
+
+
+
+
 # [2.1.0](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-backend-github/compare/netlify-cms-backend-github@2.0.9...netlify-cms-backend-github@2.1.0) (2018-11-12)
 
 

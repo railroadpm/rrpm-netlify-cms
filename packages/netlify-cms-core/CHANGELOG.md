@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.1 (2018-11-19)
+
+
+### Bug Fixes
+
+* **gitlab:** fetch media library images through API ([#1433](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1433)) ([83d2adc](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/83d2adc))
+* bug fixes from linters ([#1524](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1524)) ([6632e5d](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/6632e5d))
+* fix App configError method ([#1864](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1864)) ([79205f7](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/79205f7))
+* fix entry saved message ([#1887](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1887)) ([c4e474b](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/c4e474b))
+* fix version console log ([#1528](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1528)) ([e82289b](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/e82289b))
+* log accurate version by distribution ([#1531](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1531)) ([95a76ad](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/95a76ad))
+* **relation:** fix relation widget selection bug ([#1572](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1572)) ([77fbc04](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/77fbc04))
+* make media button consistent with links ([#1621](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1621)) ([412d1e6](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/412d1e6))
+* **config:** allow setting publish_mode to 'simple' ([#1827](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1827)) ([288359d](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/288359d))
+* **config:** stop throwing on config.yml 404, fix manual init ([#1801](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1801)) ([d06c663](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/d06c663))
+* **i18n:** fix missing widget placeholder ([#1861](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1861)) ([b1a7e00](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/b1a7e00))
+* MediaLibraryHeader CloseButton style ([#1883](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1883)) ([034c29a](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/034c29a))
+* only trim periods from file extensions ([#1554](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1554)) ([95c744e](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/95c744e))
+* **list-widget:** fix single field usage in list widget ([#1395](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1395)) ([06d3650](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/06d3650))
+* **widget-date:** fix default value for nested date widget ([#1859](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1859)) ([d8f8887](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/d8f8887))
+* **widgets:** fix list object field default values ([#1826](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1826)) ([c765793](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/c765793))
+* **workflow:** enable workflow per method ([#1569](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1569)) ([90b8156](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/90b8156))
+* **workflow:** fix status not set on new workflow entries ([#1558](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1558)) ([0aa085f](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/0aa085f))
+
+
+### Features
+
+* **config:** add support for setting custom identifier field ([#1543](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1543)) ([12418dd](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/12418dd))
+* **media:** add external media library support, Uploadcare integration ([#1602](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1602)) ([0596904](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/0596904))
+* allow custom logo on auth page ([#1818](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1818)) ([c6ae1e8](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/c6ae1e8))
+
+
+
+
+
 # [2.2.0](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-core/compare/netlify-cms-core@2.1.1...netlify-cms-core@2.2.0) (2018-11-12)
 
 

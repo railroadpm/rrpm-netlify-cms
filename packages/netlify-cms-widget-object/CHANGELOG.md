@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.6 (2018-11-19)
+
+
+### Bug Fixes
+
+* **list-widget:** fix single field usage in list widget ([#1395](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-object/issues/1395)) ([06d3650](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-object/commit/06d3650))
+
+
+
+
+
 <a name="2.0.5"></a>
 ## [2.0.5](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-object/compare/netlify-cms-widget-object@2.0.4...netlify-cms-widget-object@2.0.5) (2018-08-24)
 

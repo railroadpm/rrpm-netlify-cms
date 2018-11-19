@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.6 (2018-11-19)
+
+
+### Bug Fixes
+
+* **auth:** scrollbars not appearing in auth window ([#1766](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-lib-auth/issues/1766)) ([8176243](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-lib-auth/commit/8176243))
+* **bitbucket:** fix rebasing mistakes in bitbucket backend and deps ([#1522](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-lib-auth/issues/1522)) ([bdfd944](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-lib-auth/commit/bdfd944))
+
+
+
+
+
 ## [2.0.5](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-lib-auth/compare/netlify-cms-lib-auth@2.0.4...netlify-cms-lib-auth@2.0.5) (2018-11-12)
 
 

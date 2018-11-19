@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.10 (2018-11-19)
+
+
+### Bug Fixes
+
+* add support for default field values in editor components ([#1616](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/issues/1616)) ([0d01809](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/commit/0d01809))
+* bug fixes from linters ([#1524](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/issues/1524)) ([6632e5d](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/commit/6632e5d))
+* **editor-component-image:** fix null on empty markdown image alt ([#1778](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/issues/1778)) ([9b72419](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/commit/9b72419))
+* **editor-components:** fix default value processing ([#1848](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/issues/1848)) ([a0cfa1a](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-widget-markdown/commit/a0cfa1a))
+
+
+
+
+
 ## [2.0.9](https://github.com/netlify/netlify-cms/tree/master/packages/netlify-cms-widget-markdown/compare/netlify-cms-widget-markdown@2.0.8...netlify-cms-widget-markdown@2.0.9) (2018-11-12)
 
 

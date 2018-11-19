@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.1 (2018-11-19)
+
+
+### Bug Fixes
+
+* **build:** output aliased cms.js w/ deprecation ([#1526](https://github.com/railroadpm/rrpm-netlify-cms/issues/1526)) ([34c8c2a](https://github.com/railroadpm/rrpm-netlify-cms/commit/34c8c2a))
+* fix netlify-cms exports ([d0dabc4](https://github.com/railroadpm/rrpm-netlify-cms/commit/d0dabc4))
+* fix netlify-cms webpack plugins ([5af0586](https://github.com/railroadpm/rrpm-netlify-cms/commit/5af0586))
+* log accurate version by distribution ([#1531](https://github.com/railroadpm/rrpm-netlify-cms/issues/1531)) ([95a76ad](https://github.com/railroadpm/rrpm-netlify-cms/commit/95a76ad))
+* pass netlify-cms-core exports through netlify-cms ([#1530](https://github.com/railroadpm/rrpm-netlify-cms/issues/1530)) ([f0af6e8](https://github.com/railroadpm/rrpm-netlify-cms/commit/f0af6e8))
+* register bitbucket backend in netlify-cms ([#1537](https://github.com/railroadpm/rrpm-netlify-cms/issues/1537)) ([99d4b2b](https://github.com/railroadpm/rrpm-netlify-cms/commit/99d4b2b))
+
+
+### Features
+
+* **media:** add external media library support, Uploadcare integration ([#1602](https://github.com/railroadpm/rrpm-netlify-cms/issues/1602)) ([0596904](https://github.com/railroadpm/rrpm-netlify-cms/commit/0596904))
+
+
+
+
+
 # [2.2.0](https://github.com/netlify/netlify-cms/compare/netlify-cms@2.1.3...netlify-cms@2.2.0) (2018-11-12)
 
 **Note:** Version bump only for package netlify-cms

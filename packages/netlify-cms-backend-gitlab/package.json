@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-backend-gitlab",
   "description": "GitLab backend for Netlify CMS",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-gitlab",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "license": "MIT",
@@ -28,12 +28,12 @@
     "webpack-cli": "^3.1.0"
   },
   "peerDependencies": {
-    "emotion": "^9.2.6",
-    "immutable": "^3.7.6",
-    "lodash": "^4.17.10",
     "@rrpm/netlify-cms-lib-auth": "^2.0.0",
     "@rrpm/netlify-cms-lib-util": "^2.0.0",
     "@rrpm/netlify-cms-ui-default": "^2.0.0",
+    "emotion": "^9.2.6",
+    "immutable": "^3.7.6",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-emotion": "^9.2.6"
