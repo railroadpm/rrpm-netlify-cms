@@ -28,8 +28,8 @@ export function getPhrases() {
         newButton: 'New %{collectionLabel}',
       },
       entries: {
-        loadingEntries: 'Loading Entries',
-        cachingEntries: 'Caching Entries',
+        loadingEntries: 'Loading Reports',
+        cachingEntries: 'Caching Reports',
         longerLoading: 'This might take several minutes',
       },
     },
@@ -55,7 +55,7 @@ export function getPhrases() {
           'This will delete all unpublished changes to this report, as well as your unsaved changes from the current session. Do you still want to delete?',
         onDeleteUnpublishedChanges:
           'All unpublished changes to this report will be deleted. Do you still want to delete?',
-        loadingEntry: 'Loading entry...',
+        loadingEntry: 'Loading report...',
       },
       editorToolbar: {
         publishing: 'Publishing...',
@@ -63,8 +63,8 @@ export function getPhrases() {
         published: 'Published',
         publishAndCreateNew: 'Publish and create new',
         deleteUnpublishedChanges: 'Delete unpublished changes',
-        deleteUnpublishedEntry: 'Delete unpublished entry',
-        deletePublishedEntry: 'Delete published entry',
+        deleteUnpublishedEntry: 'Delete unpublished report',
+        deletePublishedEntry: 'Delete published report',
         deleteEntry: 'Delete report',
         saving: 'Saving...',
         save: 'Save',
@@ -137,7 +137,7 @@ export function getPhrases() {
         workflowHeading: 'Publishing Workflow',
         newPost: 'New Report',
         description:
-          '%{smart_count} entry waiting for review, %{readyCount} ready to go live. |||| %{smart_count} entries waiting for review, %{readyCount} ready to go live. ',
+          '%{smart_count} report(s) waiting for review, %{readyCount} ready to go live. |||| %{smart_count} report(s) waiting for review, %{readyCount} ready to go live. ',
       },
       workflowCard: {
         deleteChanges: 'Delete changes',
