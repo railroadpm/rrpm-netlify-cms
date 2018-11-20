@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.5](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/compare/@rrpm/netlify-cms-core@2.2.4...@rrpm/netlify-cms-core@2.2.5) (2018-11-20)
+
+**Note:** Version bump only for package @rrpm/netlify-cms-core
+
+
+
+
+
 ## [2.2.4](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/compare/@rrpm/netlify-cms-core@2.2.3...@rrpm/netlify-cms-core@2.2.4) (2018-11-20)
 
 **Note:** Version bump only for package @rrpm/netlify-cms-core
