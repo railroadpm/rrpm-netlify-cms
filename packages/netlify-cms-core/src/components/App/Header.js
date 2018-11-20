@@ -150,13 +150,13 @@ class Header extends React.Component {
                 {t('app.header.content')}
               </AppHeaderNavLink>
               {hasWorkflow ? (
-                <AppHeaderNavLink to="/workflow" activeClassName="header-link-active">
+                <AppHeaderNavLink to="/workflow" activeClassName="header-link-active" className="nc-app-header-btn nc-app-header-btn-wf">
                   <Icon type="workflow" />
                   {t('app.header.workflow')}
                 </AppHeaderNavLink>
               ) : null}
               {showMediaButton ? (
-                <AppHeaderButton onClick={openMediaLibrary} className="nc-app-header-btn">
+                <AppHeaderButton onClick={openMediaLibrary} className="nc-app-header-btn nc-app-header-btn-media">
                   <Icon type="media-alt" />
                   {t('app.header.media')}
                 </AppHeaderButton>
