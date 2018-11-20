@@ -47,7 +47,7 @@ export function getPhrases() {
           'You have unsaved changes, please save before updating status.',
         onPublishingNotReady: 'Please update status to "Ready" before publishing.',
         onPublishingWithUnsavedChanges: 'You have unsaved changes, please save before publishing.',
-        onPublishing: 'Are you sure you want to publish this report?',
+        onPublishing: 'Are you sure you want to publish this report (subject to Wed 2pm embargo when applicable)?',
         onDeleteWithUnsavedChanges:
           'Are you sure you want to delete this published report, as well as your unsaved changes from the current session?',
         onDeletePublishedEntry: 'Are you sure you want to delete this published report?',
