@@ -280,6 +280,7 @@ class EditorToolbar extends React.Component {
         <DeleteButton
           key="delete-button"
           onClick={hasUnpublishedChanges ? onDeleteUnpublishedChanges : onDelete}
+          className="nc-app-editor-btn-delete nc-app-ui-rbac"
         >
           {isDeleting ? t('editor.editorToolbar.deleting') : deleteLabel}
         </DeleteButton>

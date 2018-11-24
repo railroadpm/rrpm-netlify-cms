@@ -150,7 +150,7 @@ class Header extends React.Component {
                 {t('app.header.content')}
               </AppHeaderNavLink>
               {hasWorkflow ? (
-                <AppHeaderNavLink to="/workflow" activeClassName="header-link-active" className="nc-app-header-btn nc-app-header-btn-wf">
+                <AppHeaderNavLink to="/workflow" activeClassName="header-link-active" className="nc-app-header-btn nc-app-header-btn-wf nc-app-ui-rbac">
                   <Icon type="workflow" />
                   {t('app.header.workflow')}
                 </AppHeaderNavLink>

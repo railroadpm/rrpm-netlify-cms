@@ -108,6 +108,7 @@ class Sidebar extends React.Component {
         key={collectionName}
         to={`/collections/${collectionName}`}
         activeClassName="sidebar-active"
+        className="nc-app-sidebar-nav-link nc-app-ui-rbac"
       >
         <Icon type="write" />
         {collection.get('label')}

@@ -130,7 +130,6 @@ export default class GitGateway {
         }
       }
 
-      // TODO: Need to add roles to userData???
       const userData = {
         name: user.user_metadata.full_name || user.email.split('@').shift(),
         email: user.email,
