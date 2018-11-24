@@ -221,6 +221,7 @@ class EditorToolbar extends React.Component {
     return (
       <div>
         <ToolbarDropdown
+          className="nc-app-editor-publishing nc-app-ui-rbac"
           dropdownTopOverlap="40px"
           dropdownWidth="150px"
           renderButton={() => (
@@ -304,6 +305,7 @@ class EditorToolbar extends React.Component {
       return (
         <>
           <ToolbarDropdown
+            className="nc-app-editor-publishing nc-app-ui-rbac"
             dropdownTopOverlap="40px"
             dropdownWidth="120px"
             renderButton={() => (
@@ -331,6 +333,7 @@ class EditorToolbar extends React.Component {
             />
           </ToolbarDropdown>
           <ToolbarDropdown
+            className="nc-app-editor-publishing nc-app-ui-rbac"
             dropdownTopOverlap="40px"
             dropdownWidth="150px"
             renderButton={() => (
