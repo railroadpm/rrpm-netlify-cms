@@ -176,7 +176,7 @@ class App extends React.Component {
           {isFetching && <TopBarProgress />}
           <div>
             <Switch>
-              <Redirect exact from="/" to={defaultPath} />
+              {/* <Redirect exact from="/" to={defaultPath} /> */}
               <Redirect exact from="/search/" to={defaultPath} />
               {hasWorkflow ? <Route path="/workflow" component={Workflow} /> : null}
               <Route exact path="/collections/:name" component={Collection} />
