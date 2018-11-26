@@ -122,7 +122,7 @@ class Sidebar extends React.Component {
 
     return (
       <SidebarContainer>
-        <SidebarHeading>{t('collection.sidebar.collections')}</SidebarHeading>
+        <SidebarHeading className="nc-app-sidebar-heading">{t('collection.sidebar.collections')}</SidebarHeading>
         <SearchContainer className="nc-app-sidebar-search nc-app-ui-rbac">
           <Icon type="search" size="small" />
           <SearchInput
