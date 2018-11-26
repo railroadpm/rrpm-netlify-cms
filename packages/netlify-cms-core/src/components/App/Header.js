@@ -171,12 +171,14 @@ class Header extends React.Component {
                   dropdownTopOverlap="30px"
                   dropdownWidth="160px"
                   dropdownPosition="left"
+                  className="nc-app-header-quick-add nc-app-ui-rbac"
                 >
                   {createableCollections.map(collection => (
                     <DropdownItem
                       key={collection.get('name')}
                       label={collection.get('label_singular') || collection.get('label')}
                       onClick={() => this.handleCreatePostClick(collection.get('name'))}
+                      className={`nc-app-header-quick-add-link nc-app-header-quick-add-link-${collection.get('name')} nc-app-ui-rbac`}
                     />
                   ))}
                 </Dropdown>

@@ -74,7 +74,7 @@ const CollectionTop = ({
   t,
 }) => {
   return (
-    <CollectionTopContainer>
+    <CollectionTopContainer className="nc-app-collection-container nc-app-ui-rbac">
       <CollectionTopRow>
         <CollectionTopHeading>{collectionLabel}</CollectionTopHeading>
         {newEntryUrl ? (

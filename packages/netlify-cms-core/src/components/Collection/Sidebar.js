@@ -108,7 +108,7 @@ class Sidebar extends React.Component {
         key={collectionName}
         to={`/collections/${collectionName}`}
         activeClassName="sidebar-active"
-        className="nc-app-sidebar-nav-link nc-app-ui-rbac"
+        className={`nc-app-sidebar-nav-link nc-app-sidebar-nav-link-${collectionName} nc-app-ui-rbac`}
       >
         <Icon type="write" />
         {collection.get('label')}
@@ -123,7 +123,7 @@ class Sidebar extends React.Component {
     return (
       <SidebarContainer>
         <SidebarHeading>{t('collection.sidebar.collections')}</SidebarHeading>
-        <SearchContainer>
+        <SearchContainer className="nc-app-sidebar-search nc-app-ui-rbac">
           <Icon type="search" size="small" />
           <SearchInput
             onChange={e => this.setState({ query: e.target.value })}
