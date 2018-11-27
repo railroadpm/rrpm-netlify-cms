@@ -121,7 +121,7 @@ class Header extends React.Component {
 
   defaultCollectionPath = () => {
     const defaultCollectionName = (window && typeof window.ncDefaultCollectionName != 'undefined' && window.ncDefaultCollectionName) || '';
-    return defaultCollectionName ? `/#/collections/${defaultCollectionName}` : '/';
+    return defaultCollectionName ? `/collections/${defaultCollectionName}` : '/';
   }
 
   render() {
