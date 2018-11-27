@@ -142,7 +142,7 @@ class Header extends React.Component {
             <nav>
               <AppHeaderNavLink
                 to="/"
-                className = "nc-app-header-nav-link"
+                className = "nc-app-header-btn nc-app-header-btn-content"
                 activeClassName="header-link-active"
                 isActive={(match, location) => location.pathname.startsWith('/collections/')}
               >
