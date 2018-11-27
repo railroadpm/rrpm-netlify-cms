@@ -135,14 +135,19 @@ class Header extends React.Component {
       .filter(collection => collection.get('create'))
       .toList();
 
+    defaultCollectionPath = () => {
+      const defaultCollectionName = window && typeof window.ncDefaultCollectionName != 'undefined' && window.ncDefaultCollectionName || '';
+      return defaultCollectionName ? `/#/collections/${defaultCollectionName}` : '/';
+    }
+
     return (
       <AppHeaderContainer>
         <AppHeader className="nc-app-header">
           <AppHeaderContent className="nc-app-header-content">
             <nav>
               <AppHeaderNavLink
-                to="/"
-                className = "nc-app-header-btn nc-app-header-btn-content"
+                to={defaultCollectionPath()}
+                className="nc-app-header-btn nc-app-header-btn-content"
                 activeClassName="header-link-active"
                 isActive={(match, location) => location.pathname.startsWith('/collections/')}
               >
