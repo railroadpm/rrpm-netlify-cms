@@ -146,7 +146,7 @@ class Header extends React.Component {
           <AppHeaderContent className="nc-app-header-content">
             <nav>
               <AppHeaderNavLink
-                to={defaultCollectionPath()}
+                to={this.defaultCollectionPath()}
                 className="nc-app-header-btn nc-app-header-btn-content"
                 activeClassName="header-link-active"
                 isActive={(match, location) => location.pathname.startsWith('/collections/')}
