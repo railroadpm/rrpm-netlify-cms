@@ -119,6 +119,11 @@ class Header extends React.Component {
     }
   };
 
+  defaultCollectionPath = () => {
+    const defaultCollectionName = (window && typeof window.ncDefaultCollectionName != 'undefined' && window.ncDefaultCollectionName) || '';
+    return defaultCollectionName ? `/#/collections/${defaultCollectionName}` : '/';
+  }
+
   render() {
     const {
       user,
@@ -134,11 +139,6 @@ class Header extends React.Component {
     const createableCollections = collections
       .filter(collection => collection.get('create'))
       .toList();
-
-    defaultCollectionPath = () => {
-      const defaultCollectionName = window && typeof window.ncDefaultCollectionName != 'undefined' && window.ncDefaultCollectionName || '';
-      return defaultCollectionName ? `/#/collections/${defaultCollectionName}` : '/';
-    }
 
     return (
       <AppHeaderContainer>
