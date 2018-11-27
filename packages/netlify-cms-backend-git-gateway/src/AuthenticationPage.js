@@ -149,7 +149,7 @@ export default class GitGatewayAuthenticationPage extends React.Component {
         <AuthenticationPage
           logoUrl={config.get('logo_url')}
           onLogin={this.handleIdentity}
-          renderButtonContent={() => 'Login with Netlify Identity'}
+          renderButtonContent={() => 'Login'}
         />
       );
     }
