@@ -30,7 +30,6 @@ const Entries = ({
         viewStyle={viewStyle}
         cursor={cursor}
         handleCursorActions={handleCursorActions}
-        className="nc-app-collection-entries nc-app-ui-rbac"
       />
     );
   }

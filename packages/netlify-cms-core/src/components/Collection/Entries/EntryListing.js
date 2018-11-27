@@ -66,7 +66,7 @@ export default class EntryListing extends React.Component {
     const { collections } = this.props;
 
     return (
-      <div>
+      <div className="nc-app-collection-entries nc-app-ui-rbac">
         <CardsGrid>
           {Map.isMap(collections)
             ? this.renderCardsForSingleCollection()
