@@ -30,6 +30,7 @@ const Entries = ({
         viewStyle={viewStyle}
         cursor={cursor}
         handleCursorActions={handleCursorActions}
+        className="nc-app-collection-entries nc-app-ui-rbac"
       />
     );
   }
@@ -38,7 +39,7 @@ const Entries = ({
     return <Loader active>{loadingMessages}</Loader>;
   }
 
-  return <div className="nc-collectionPage-noEntries">No Entries</div>;
+  return <div className="nc-collectionPage-noEntries">No Reports</div>;
 };
 
 Entries.propTypes = {
