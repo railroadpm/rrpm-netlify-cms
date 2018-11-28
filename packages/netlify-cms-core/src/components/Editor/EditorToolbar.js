@@ -274,7 +274,11 @@ class EditorToolbar extends React.Component {
       (!hasUnpublishedChanges && !isModification && t('editor.editorToolbar.deletePublishedEntry'));
 
     return [
-      <SaveButton key="save-button" onClick={() => hasChanged && onPersist()}>
+      <SaveButton
+        key="save-button"
+        onClick={() => hasChanged && onPersist()}
+        className="nc-app-editor-btn-save"
+      >
         {isPersisting ? t('editor.editorToolbar.saving') : t('editor.editorToolbar.save')}
       </SaveButton>,
       isNewEntry || !deleteLabel ? null : (
