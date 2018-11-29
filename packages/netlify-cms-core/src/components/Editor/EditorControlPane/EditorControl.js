@@ -174,12 +174,16 @@ class EditorControl extends React.Component {
     } = this.props;
     const widgetName = field.get('widget');
     const widget = resolveWidget(widgetName);
+    const sectionName = field.get('sectionStart');
     const fieldName = field.get('name');
     const fieldHint = field.get('hint');
     const uniqueFieldId = uniqueId();
     const metadata = fieldsMetaData && fieldsMetaData.get(fieldName);
     const errors = fieldsErrors && fieldsErrors.get(fieldName);
     return (
+      {sectionName && (
+        <div className="nc-app-editor-section-heading"><span>{sectionName}</span></div>
+      )}
       <ControlContainer>
         <ControlErrorsList>
           {errors &&
