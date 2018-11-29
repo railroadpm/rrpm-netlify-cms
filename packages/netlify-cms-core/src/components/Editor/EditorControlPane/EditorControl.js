@@ -181,10 +181,10 @@ class EditorControl extends React.Component {
     const metadata = fieldsMetaData && fieldsMetaData.get(fieldName);
     const errors = fieldsErrors && fieldsErrors.get(fieldName);
     return (
-      {sectionName && (
-        <div className="nc-app-editor-section-heading"><span>{sectionName}</span></div>
-      )}
       <ControlContainer>
+        {sectionName && (
+          <div className="nc-app-editor-section-heading"><span>{sectionName}</span></div>
+        )}
         <ControlErrorsList>
           {errors &&
             errors.map(

@@ -79,5 +79,6 @@
     "to-string-loader": "^1.1.5",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0"
-  }
+  },
+  "gitHead": "ec6a0ffd9fe44435a5be0cffaff0cb7b97afa1db"
 }
