@@ -24,13 +24,14 @@ export default class StringControl extends React.Component {
       setActiveStyle,
       setInactiveStyle,
     } = this.props;
-
+    const disabled = (window && typeof window.ncDisableInputsByName != 'undefined' && forID.includes(window.ncDisableInputsByName));
     return (
       <input
         type="text"
         id={forID}
         className={classNameWrapper}
         value={value || ''}
+        disabled={disabled}
         onChange={e => onChange(e.target.value)}
         onFocus={setActiveStyle}
         onBlur={setInactiveStyle}

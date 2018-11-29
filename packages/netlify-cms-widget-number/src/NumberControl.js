@@ -38,6 +38,7 @@ export default class NumberControl extends React.Component {
     const min = field.get('min', '');
     const max = field.get('max', '');
     const step = field.get('step', field.get('valueType') === 'int' ? 1 : '');
+    const disabled = (window && typeof window.ncDisableInputsByName != 'undefined' && forID.includes(window.ncDisableInputsByName));
     return (
       <input
         type="number"
@@ -49,6 +50,7 @@ export default class NumberControl extends React.Component {
         step={step}
         min={min}
         max={max}
+        disabled={disabled}
         onChange={this.handleChange}
       />
     );
