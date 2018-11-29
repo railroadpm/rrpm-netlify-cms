@@ -181,7 +181,7 @@ class EditorControl extends React.Component {
     const metadata = fieldsMetaData && fieldsMetaData.get(fieldName);
     const errors = fieldsErrors && fieldsErrors.get(fieldName);
     return (
-      <ControlContainer>
+      <ControlContainer className="nc-app-editor-control-container">
         {sectionName && (
           <div className="nc-app-editor-section-heading"><span>{sectionName}</span></div>
         )}
