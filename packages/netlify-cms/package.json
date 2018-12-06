@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms",
   "description": "An extensible, open source, Git-based, React CMS for static sites.",
-  "version": "2.2.21",
+  "version": "2.2.22",
   "homepage": "https://www.netlifycms.org",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
@@ -29,7 +29,7 @@
     "@rrpm/netlify-cms-backend-github": "^2.1.2",
     "@rrpm/netlify-cms-backend-gitlab": "^2.1.2",
     "@rrpm/netlify-cms-backend-test": "^2.0.8",
-    "@rrpm/netlify-cms-core": "^2.2.19",
+    "@rrpm/netlify-cms-core": "^2.2.20",
     "@rrpm/netlify-cms-editor-component-image": "^2.0.6",
     "@rrpm/netlify-cms-media-library-uploadcare": "^0.2.3",
     "@rrpm/netlify-cms-widget-boolean": "^2.0.7",
