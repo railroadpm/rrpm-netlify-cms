@@ -56,11 +56,12 @@ const SettingsDropdown = ({ displayUrl, imageUrl, onLogoutClick, t }) => (
       </AppHeaderSiteLink>
     ) : null}
     <Dropdown
+      className="nc-app-avatar-menu"
       dropdownTopOverlap="50px"
       dropdownWidth="100px"
       dropdownPosition="right"
       renderButton={() => (
-        <DropdownButton>
+        <DropdownButton className="nc-app-avatar-logout-btn">
           <Avatar imageUrl={imageUrl} />
         </DropdownButton>
       )}
