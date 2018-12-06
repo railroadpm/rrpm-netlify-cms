@@ -15,7 +15,7 @@ export function getPhrases() {
         waitingBackend: 'Waiting for backend...',
       },
       notFoundPage: {
-        header: 'Not Found',
+        header: 'Oops, maybe your connection timed-out? Try logging-out and back in. Or confirm that you have the correct address.',
       },
     },
     collection: {
