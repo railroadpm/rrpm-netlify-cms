@@ -92,7 +92,7 @@ export default class GitGateway {
           },
         ).then(async res => {
           const contentType = res.headers.get('Content-Type');
-          coonsole.log('Netlify authenticate user. Fetch settings. Content-Type:', contentType);
+          console.log('Netlify authenticate user. Fetch settings. Content-Type:', contentType);
           if (contentType !== 'application/json' && contentType !== 'text/json') {
             throw new APIError(
               `Your Git Gateway backend is not returning valid settings. Please make sure it is enabled.`,
@@ -102,7 +102,7 @@ export default class GitGateway {
           }
 
           const body = await res.json();
-          coonsole.log('Netlify authenticate user. Fetch settings. Body:', body);
+          console.log('Netlify authenticate user. Fetch settings. Body:', body);
 
           if (!res.ok) {
             throw new APIError(
