@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.23](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/compare/@rrpm/netlify-cms-core@2.2.22...@rrpm/netlify-cms-core@2.2.23) (2018-12-27)
+
+
+### Bug Fixes
+
+* correct validation pattern error message ([#1879](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1879)) ([5d97f13](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/5d97f13))
+* **backend:** use singular label in custom commit message ([#1917](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1917)) ([d39eb8c](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/d39eb8c))
+* **netlify-cms-core:** avoid leading replacement char in slug ([#1965](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1965)) ([a1cafc7](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/a1cafc7))
+* **netlify-cms-core:** avoid partially loaded collection list ([#1964](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1964)) ([45b6df5](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/45b6df5))
+* **netlify-cms-core:** duplicate key warning ([#1930](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1930)) ([d49440c](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/d49440c))
+* **netlify-cms-core:** fix collection entries loaded check ([#1881](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1881)) ([ce53ce6](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/ce53ce6))
+* **netlify-cms-core:** workflow hide delete publish entry button ([#1971](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/issues/1971)) ([f690e51](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/commit/f690e51))
+
+
+
+
+
 ## [2.2.22](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-core/compare/@rrpm/netlify-cms-core@2.2.21...@rrpm/netlify-cms-core@2.2.22) (2018-12-06)
 
 **Note:** Version bump only for package @rrpm/netlify-cms-core
