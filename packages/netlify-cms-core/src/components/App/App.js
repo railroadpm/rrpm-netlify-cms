@@ -88,6 +88,7 @@ class App extends React.Component {
   }
 
   handleLogin(credentials) {
+    console.log('Netlify handle login');
     this.props.loginUser(credentials);
   }
 
