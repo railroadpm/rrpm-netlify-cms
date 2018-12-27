@@ -255,6 +255,7 @@ class EditorToolbar extends React.Component {
       onPersist,
       onDelete,
       onDeleteUnpublishedChanges,
+      showDelete,
       hasChanged,
       hasUnpublishedChanges,
       isPersisting,
@@ -281,7 +282,7 @@ class EditorToolbar extends React.Component {
       >
         {isPersisting ? t('editor.editorToolbar.saving') : t('editor.editorToolbar.save')}
       </SaveButton>,
-      isNewEntry || !deleteLabel ? null : (
+      !showDelete && !hasUnpublishedChanges && !isModification ? null : (
         <DeleteButton
           key="delete-button"
           onClick={hasUnpublishedChanges ? onDeleteUnpublishedChanges : onDelete}
