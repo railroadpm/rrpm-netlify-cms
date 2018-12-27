@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-backend-git-gateway",
   "description": "Git Gateway backend for Netlify CMS",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "repository": "https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway",
   "bugs": "https://github.com/railroadpm/rrpm-netlify-cms/issues",
   "main": "dist/netlify-cms-backend-git-gateway.js",
