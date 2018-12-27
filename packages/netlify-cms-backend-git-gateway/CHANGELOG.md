@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.10](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/compare/@rrpm/netlify-cms-backend-git-gateway@2.1.9...@rrpm/netlify-cms-backend-git-gateway@2.1.10) (2018-12-27)
+
+**Note:** Version bump only for package @rrpm/netlify-cms-backend-git-gateway
+
+
+
+
+
 ## [2.1.9](https://github.com/railroadpm/rrpm-netlify-cms/tree/master/packages/netlify-cms-backend-git-gateway/compare/@rrpm/netlify-cms-backend-git-gateway@2.1.7...@rrpm/netlify-cms-backend-git-gateway@2.1.9) (2018-12-27)
 
 
