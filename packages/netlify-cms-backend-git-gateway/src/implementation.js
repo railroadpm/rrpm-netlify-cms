@@ -102,7 +102,7 @@ export default class GitGateway {
           }
 
           const body = await res.json();
-          console.log('Netlify authenticate user, fetch settings');
+          // console.log('Netlify authenticate user, fetch settings');
           // console.log('Netlify authenticate user. Fetch settings. Body:', body);
 
           if (!res.ok) {
