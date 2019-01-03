@@ -1,7 +1,7 @@
 {
   "name": "@rrpm/netlify-cms-backend-github",
   "description": "GitHub backend for Netlify CMS",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
