@@ -123,6 +123,7 @@ export default class GitHub {
 
   // Fetches a single entry.
   getEntry(collection, slug, path) {
+    console.log('NC GitHub: getEntry()', { collection, slug, path });
     return this.api.readFile(path).then(data => ({
       file: { path },
       data,

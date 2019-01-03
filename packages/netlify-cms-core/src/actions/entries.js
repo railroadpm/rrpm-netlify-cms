@@ -220,6 +220,7 @@ export function changeDraftFieldValidation(field, errors) {
  */
 
 export function loadEntry(collection, slug) {
+  console.log('NC Core: loadEntry()', { collection, slug });
   return (dispatch, getState) => {
     const state = getState();
     const backend = currentBackend(state.config);
@@ -256,6 +257,7 @@ const addAppendActionsToCursor = cursor =>
   );
 
 export function loadEntries(collection, page = 0) {
+  console.log('NC Core: loadEntry()', { collection, page });
   return (dispatch, getState) => {
     if (collection.get('isFetching')) {
       return;
