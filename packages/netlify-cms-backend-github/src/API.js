@@ -226,8 +226,18 @@ export default class API {
   }
 
   readUnpublishedBranchFile(slug, collection) {
+    try {
+      collection = typeof collection === 'undefined' ? null : collection;
+      console.log('NC GitHub: readUnpublishedBranchFile()', { slug, collection });
+    } catch (e1) {}
+
     const metaDataPromise = this.retrieveMetadata(slug)
       .catch(e => {
+        try {
+          collection = typeof collection === 'undefined' ? null : collection;
+          console.log('NC GitHub: readUnpublishedBranchFile() -> retrieveMetadata Error', { slug, collection, e });
+        } catch (e2) {}
+
         if (collection) {
           return this.retrieveMetadata(`${collection.get('name')}-${slug}`);
         }
@@ -318,6 +328,10 @@ export default class API {
   }
 
   persistFiles(entry, mediaFiles, options) {
+    try {
+      console.log('NC GitHub: persistFiles()');
+    } catch (e) {}
+
     const uploadPromises = [];
     const files = entry ? mediaFiles.concat(entry) : mediaFiles;
 

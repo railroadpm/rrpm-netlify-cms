@@ -263,7 +263,7 @@ const addAppendActionsToCursor = cursor =>
 export function loadEntries(collection, page = 0) {
   try {
     collection = typeof collection === 'undefined' ? null : collection;
-    console.log('NC Core: loadEntry()', { collection, page });
+    console.log('NC Core: loadEntries()', { collection, page });
   } catch (e) {}
 
   return (dispatch, getState) => {
@@ -411,6 +411,11 @@ function createEmptyDraftData(fields) {
 }
 
 export function persistEntry(collection) {
+  try {
+    collection = typeof collection === 'undefined' ? null : collection;
+    console.log('NC Core: persistEntry()', { collection });
+  } catch (e1) {}
+
   return (dispatch, getState) => {
     const state = getState();
     const entryDraft = state.entryDraft;
@@ -440,6 +445,11 @@ export function persistEntry(collection) {
     const backend = currentBackend(state.config);
     const assetProxies = entryDraft.get('mediaFiles').map(path => getAsset(state, path));
     const entry = entryDraft.get('entry');
+
+    try {
+      collection = typeof collection === 'undefined' ? null : collection;
+      console.log('NC Core: persistEntry *Thunk*', { collection });
+    } catch (e2) {}
 
     /**
      * Serialize the values of any fields with registered serializers, and

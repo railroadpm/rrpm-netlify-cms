@@ -148,6 +148,10 @@ export default class GitHub {
   }
 
   persistEntry(entry, mediaFiles = [], options = {}) {
+    try {
+      console.log('NC GitHub: persistEntry()');
+    } catch (e) {}
+
     return this.api.persistFiles(entry, mediaFiles, options);
   }
 
@@ -216,6 +220,11 @@ export default class GitHub {
   }
 
   unpublishedEntry(collection, slug) {
+    try {
+      collection = typeof collection === 'undefined' ? null : collection;
+      console.log('NC GitHub: unpublishedEntry()', { collection, slug });
+    } catch (e) {}
+
     return this.api.readUnpublishedBranchFile(slug, collection).then(data => {
       if (!data) return null;
       return {

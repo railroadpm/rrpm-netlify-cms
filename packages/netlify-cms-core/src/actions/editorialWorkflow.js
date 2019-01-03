@@ -233,16 +233,27 @@ export function loadUnpublishedEntry(collection, slug) {
   try {
     collection = typeof collection === 'undefined' ? null : collection;
     console.log('NC Core Editorial: loadUnpublishedEntry()', { collection, slug });
-  } catch (e) {}
+  } catch (e1) {}
 
   return (dispatch, getState) => {
     const state = getState();
     const backend = currentBackend(state.config);
     dispatch(unpublishedEntryLoading(collection, slug));
+
+    try {
+      collection = typeof collection === 'undefined' ? null : collection;
+      console.log('NC Core Editorial: loadUnpublishedEntry *Thunk*', { collection, slug });
+    } catch (e2) {}
+
     backend
       .unpublishedEntry(collection, slug)
       .then(entry => dispatch(unpublishedEntryLoaded(collection, entry)))
       .catch(error => {
+        try {
+          collection = typeof collection === 'undefined' ? null : collection;
+          console.log('NC Core Editorial: loadUnpublishedEntry *Thunk* Error', { collection, slug, error });
+        } catch (e3) {}
+
         if (error instanceof EditorialWorkflowError && error.notUnderEditorialWorkflow) {
           dispatch(unpublishedEntryRedirected(collection, slug));
           dispatch(loadEntry(collection, slug));
