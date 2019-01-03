@@ -230,7 +230,11 @@ function unpublishedEntryDeleteError(collection, slug, transactionID) {
  */
 
 export function loadUnpublishedEntry(collection, slug) {
-  console.log('NC Core Editorial: loadUnpublishedEntry()', { collection, slug });
+  try {
+    collection = typeof collection === 'undefined' ? null : collection;
+    console.log('NC Core Editorial: loadUnpublishedEntry()', { collection, slug });
+  } catch (e) {}
+
   return (dispatch, getState) => {
     const state = getState();
     const backend = currentBackend(state.config);
@@ -259,7 +263,11 @@ export function loadUnpublishedEntry(collection, slug) {
 }
 
 export function loadUnpublishedEntries(collections) {
-  console.log('NC Core Editorial: loadUnpublishedEntries()', { collection, slug });
+  try {
+    collection = typeof collection === 'undefined' ? null : collection;
+    console.log('NC Core Editorial: loadUnpublishedEntries()', { collection, slug });
+  } catch (e) {}
+
   return (dispatch, getState) => {
     const state = getState();
     if (state.config.get('publish_mode') !== EDITORIAL_WORKFLOW) return;

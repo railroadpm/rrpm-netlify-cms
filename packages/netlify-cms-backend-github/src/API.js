@@ -171,7 +171,10 @@ export default class API {
   }
 
   readFile(path, sha, branch = this.branch) {
-    console.log('NC GitHub: readFile()', { repoURL: this.repoURL, path, sha, branch });
+    try {
+      console.log('NC GitHub: readFile()', { repoURL: this.repoURL, path, sha, branch });
+    } catch (e) {}
+
     if (sha) {
       return this.getBlob(sha);
     } else {
