@@ -172,7 +172,7 @@ export default class API {
 
   readFile(path, sha, branch = this.branch) {
     try {
-      console.log('NC GitHub: readFile()', { repoURL: this.repoURL, path, sha, branch });
+      // console.log('NC GitHub: readFile()', { repoURL: this.repoURL, path, sha, branch });
     } catch (e) {}
 
     if (sha) {
@@ -227,14 +227,14 @@ export default class API {
 
   readUnpublishedBranchFile(slug, collection = null, contentKey = null) {
     try {
-      console.log('NC GitHub: readUnpublishedBranchFile()', { slug, collection, contentKey });
+      // console.log('NC GitHub: readUnpublishedBranchFile()', { slug, collection, contentKey });
     } catch (e1) {}
 
     contentKey = contentKey || (collection ? `${collection.get('name')}-${slug}` : slug);
     const metaDataPromise = this.retrieveMetadata(contentKey)
       .catch(e => {
         try {
-          console.log('NC GitHub: readUnpublishedBranchFile() -> retrieveMetadata Error', { slug, collection, e });
+          // console.log('NC GitHub: readUnpublishedBranchFile() -> retrieveMetadata Error', { slug, collection, e });
         } catch (e2) {}
 
         return this.retrieveMetadata(contentKey);
@@ -326,7 +326,7 @@ export default class API {
 
   persistFiles(entry, mediaFiles, options) {
     try {
-      console.log('NC GitHub: persistFiles()');
+      // console.log('NC GitHub: persistFiles()');
     } catch (e) {}
 
     const uploadPromises = [];

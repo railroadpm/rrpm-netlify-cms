@@ -232,7 +232,7 @@ function unpublishedEntryDeleteError(collection, slug, transactionID) {
 export function loadUnpublishedEntry(collection, slug) {
   try {
     collection = typeof collection === 'undefined' ? null : collection;
-    console.log('NC Core Editorial: loadUnpublishedEntry()', { collection, slug });
+    // console.log('NC Core Editorial: loadUnpublishedEntry()', { collection, slug });
   } catch (e1) {}
 
   return (dispatch, getState) => {
@@ -242,7 +242,7 @@ export function loadUnpublishedEntry(collection, slug) {
 
     try {
       collection = typeof collection === 'undefined' ? null : collection;
-      console.log('NC Core Editorial: loadUnpublishedEntry *Thunk*', { collection, slug });
+      // console.log('NC Core Editorial: loadUnpublishedEntry *Thunk*', { collection, slug });
     } catch (e2) {}
 
     backend
@@ -251,7 +251,7 @@ export function loadUnpublishedEntry(collection, slug) {
       .catch(error => {
         try {
           collection = typeof collection === 'undefined' ? null : collection;
-          console.log('NC Core Editorial: loadUnpublishedEntry *Thunk* Error', { collection, slug, error });
+          // console.log('NC Core Editorial: loadUnpublishedEntry *Thunk* Error', { collection, slug, error });
         } catch (e3) {}
 
         if (error instanceof EditorialWorkflowError && error.notUnderEditorialWorkflow) {
@@ -276,7 +276,7 @@ export function loadUnpublishedEntry(collection, slug) {
 export function loadUnpublishedEntries(collections) {
   try {
     collections = typeof collections === 'undefined' ? null : collections;
-    console.log('NC Core Editorial: loadUnpublishedEntries()', { collections });
+    // console.log('NC Core Editorial: loadUnpublishedEntries()', { collections });
   } catch (e) {}
 
   return (dispatch, getState) => {

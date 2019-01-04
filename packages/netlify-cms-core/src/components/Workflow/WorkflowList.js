@@ -171,10 +171,10 @@ class WorkflowList extends React.Component {
     return (
       <div>
         {entries
-          .filter(entry => {
-            console.log('NC WF List: entry', { entry, column });
-            return true;
-          })
+          // .filter(entry => {
+          //   // console.log('NC WF List: entry', { entry, column });
+          //   return true;
+          // })
           .map(entry => {
             const timestamp = moment(entry.getIn(['metaData', 'timeStamp'])).format('MMMM D');
             const editLink = `collections/${entry.getIn([

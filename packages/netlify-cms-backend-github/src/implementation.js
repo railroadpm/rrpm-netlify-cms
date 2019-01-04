@@ -125,7 +125,7 @@ export default class GitHub {
   getEntry(collection, slug, path) {
     try {
       collection = typeof collection === 'undefined' ? null : collection;
-      console.log('NC GitHub: getEntry()', { collection, slug, path });
+      // console.log('NC GitHub: getEntry()', { collection, slug, path });
     }
     catch (e) {}
 
@@ -149,7 +149,7 @@ export default class GitHub {
 
   persistEntry(entry, mediaFiles = [], options = {}) {
     try {
-      console.log('NC GitHub: persistEntry()');
+      // console.log('NC GitHub: persistEntry()');
     } catch (e) {}
 
     return this.api.persistFiles(entry, mediaFiles, options);
@@ -174,7 +174,7 @@ export default class GitHub {
 
   unpublishedEntries(collections) {
     try {
-      console.log('NC GitHub: unpublishedEntries()', { collections });
+      // console.log('NC GitHub: unpublishedEntries()', { collections });
     } catch (e1) {}
 
     return this.api
@@ -189,7 +189,7 @@ export default class GitHub {
               const slug = contentKey.split('-').pop();
 
               try {
-                console.log('NC GitHub: unpublishedEntries() Branches', { slug, collections, branch });
+                // console.log('NC GitHub: unpublishedEntries() Branches', { slug, collections, branch });
               } catch (e2) {}
 
               return sem.take(() =>
@@ -232,7 +232,7 @@ export default class GitHub {
   unpublishedEntry(collection, slug) {
     try {
       collection = typeof collection === 'undefined' ? null : collection;
-      console.log('NC GitHub: unpublishedEntry()', { collection, slug });
+      // console.log('NC GitHub: unpublishedEntry()', { collection, slug });
     } catch (e) {}
 
     return this.api.readUnpublishedBranchFile(slug, collection).then(data => {

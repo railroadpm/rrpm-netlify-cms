@@ -222,7 +222,7 @@ export function changeDraftFieldValidation(field, errors) {
 export function loadEntry(collection, slug) {
   try {
     collection = typeof collection === 'undefined' ? null : collection;
-    console.log('NC Core: loadEntry()', { collection, slug });
+    // console.log('NC Core: loadEntry()', { collection, slug });
   } catch (e) {}
 
   return (dispatch, getState) => {
@@ -263,7 +263,7 @@ const addAppendActionsToCursor = cursor =>
 export function loadEntries(collection, page = 0) {
   try {
     collection = typeof collection === 'undefined' ? null : collection;
-    console.log('NC Core: loadEntries()', { collection, page });
+    // console.log('NC Core: loadEntries()', { collection, page });
   } catch (e) {}
 
   return (dispatch, getState) => {
@@ -413,7 +413,7 @@ function createEmptyDraftData(fields) {
 export function persistEntry(collection) {
   try {
     collection = typeof collection === 'undefined' ? null : collection;
-    console.log('NC Core: persistEntry()', { collection });
+    // console.log('NC Core: persistEntry()', { collection });
   } catch (e1) {}
 
   return (dispatch, getState) => {
@@ -448,7 +448,7 @@ export function persistEntry(collection) {
 
     try {
       collection = typeof collection === 'undefined' ? null : collection;
-      console.log('NC Core: persistEntry *Thunk*', { collection });
+      // console.log('NC Core: persistEntry *Thunk*', { collection });
     } catch (e2) {}
 
     /**
