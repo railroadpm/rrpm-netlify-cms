@@ -334,7 +334,7 @@ class Backend {
 
   unpublishedEntries(collections) {
     return this.implementation
-      .unpublishedEntries()
+      .unpublishedEntries(collections)
       .then(loadedEntries => loadedEntries.filter(entry => entry !== null))
       .then(entries =>
         entries.map(loadedEntry => {
