@@ -170,47 +170,52 @@ class WorkflowList extends React.Component {
     }
     return (
       <div>
-        {entries.map(entry => {
-          const timestamp = moment(entry.getIn(['metaData', 'timeStamp'])).format('MMMM D');
-          const editLink = `collections/${entry.getIn([
-            'metaData',
-            'collection',
-          ])}/entries/${entry.get('slug')}`;
-          const slug = entry.get('slug');
-          const dataTitle = entry.getIn(['data', 'title']);
-          const fullTitle = `${dataTitle}_${slug}`;
-          const ownStatus = entry.getIn(['metaData', 'status']);
-          const collection = entry.getIn(['metaData', 'collection']);
-          const isModification = entry.get('isModification');
-          const canPublish = ownStatus === status.last() && !entry.get('isPersisting', false);
-          return (
-            <DragSource
-              namespace={DNDNamespace}
-              key={`${collection}-${slug}`}
-              slug={slug}
-              collection={collection}
-              ownStatus={ownStatus}
-            >
-              {connect =>
-                connect(
-                  <div>
-                    <WorkflowCard
-                      collectionName={collection}
-                      title={slug}
-                      authorLastChange={entry.getIn(['metaData', 'user'])}
-                      body={entry.getIn(['data', 'body'])}
-                      isModification={isModification}
-                      editLink={editLink}
-                      timestamp={timestamp}
-                      onDelete={this.requestDelete.bind(this, collection, slug, ownStatus)}
-                      canPublish={canPublish}
-                      onPublish={this.requestPublish.bind(this, collection, slug, ownStatus)}
-                    />
-                  </div>,
-                )
-              }
-            </DragSource>
-          );
+        {entries
+          .filter(entry => {
+            console.log('NC WF List: entry', { entry, column });
+            return true;
+          })
+          .map(entry => {
+            const timestamp = moment(entry.getIn(['metaData', 'timeStamp'])).format('MMMM D');
+            const editLink = `collections/${entry.getIn([
+              'metaData',
+              'collection',
+            ])}/entries/${entry.get('slug')}`;
+            const slug = entry.get('slug');
+            const dataTitle = entry.getIn(['data', 'title']);
+            const fullTitle = `${dataTitle}_${slug}`;
+            const ownStatus = entry.getIn(['metaData', 'status']);
+            const collection = entry.getIn(['metaData', 'collection']);
+            const isModification = entry.get('isModification');
+            const canPublish = ownStatus === status.last() && !entry.get('isPersisting', false);
+            return (
+              <DragSource
+                namespace={DNDNamespace}
+                key={`${collection}-${slug}`}
+                slug={slug}
+                collection={collection}
+                ownStatus={ownStatus}
+              >
+                {connect =>
+                  connect(
+                    <div>
+                      <WorkflowCard
+                        collectionName={collection}
+                        title={slug}
+                        authorLastChange={entry.getIn(['metaData', 'user'])}
+                        body={entry.getIn(['data', 'body'])}
+                        isModification={isModification}
+                        editLink={editLink}
+                        timestamp={timestamp}
+                        onDelete={this.requestDelete.bind(this, collection, slug, ownStatus)}
+                        canPublish={canPublish}
+                        onPublish={this.requestPublish.bind(this, collection, slug, ownStatus)}
+                      />
+                    </div>,
+                  )
+                }
+              </DragSource>
+            );
         })}
       </div>
     );
