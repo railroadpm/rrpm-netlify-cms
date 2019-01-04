@@ -275,8 +275,8 @@ export function loadUnpublishedEntry(collection, slug) {
 
 export function loadUnpublishedEntries(collections) {
   try {
-    collection = typeof collection === 'undefined' ? null : collection;
-    console.log('NC Core Editorial: loadUnpublishedEntries()', { collection, slug });
+    collections = typeof collections === 'undefined' ? null : collections;
+    console.log('NC Core Editorial: loadUnpublishedEntries()', { collections, slug });
   } catch (e) {}
 
   return (dispatch, getState) => {

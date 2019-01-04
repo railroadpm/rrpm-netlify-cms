@@ -172,7 +172,11 @@ export default class GitHub {
     return this.api.deleteFile(path, commitMessage, options);
   }
 
-  unpublishedEntries() {
+  unpublishedEntries(collections) {
+    try {
+      console.log('NC GitHub: unpublishedEntries()', { collections });
+    } catch (e1) {}
+
     return this.api
       .listUnpublishedBranches()
       .then(branches => {
@@ -182,6 +186,11 @@ export default class GitHub {
           promises.push(
             new Promise(resolve => {
               const slug = branch.ref.split('refs/heads/cms/').pop();
+
+              try {
+                console.log('NC GitHub: unpublishedEntries() Branches', { slug, collections, branch });
+              } catch (e2) {}
+
               return sem.take(() =>
                 this.api
                   .readUnpublishedBranchFile(slug)

@@ -231,16 +231,14 @@ export default class API {
       console.log('NC GitHub: readUnpublishedBranchFile()', { slug, collection });
     } catch (e1) {}
 
-    const metaDataPromise = this.retrieveMetadata(slug)
+    const contentKey = collection ? `${collection.get('name')}-${slug}` : slug;
+    const metaDataPromise = this.retrieveMetadata(contentKey)
       .catch(e => {
         try {
-          collection = typeof collection === 'undefined' ? null : collection;
           console.log('NC GitHub: readUnpublishedBranchFile() -> retrieveMetadata Error', { slug, collection, e });
         } catch (e2) {}
 
-        if (collection) {
-          return this.retrieveMetadata(`${collection.get('name')}-${slug}`);
-        }
+        return this.retrieveMetadata(contentKey);
 
         console.log(e.message, 'line-height: 30px;text-align: center;font-weight: bold');
       })
@@ -385,10 +383,7 @@ export default class API {
   }
 
   editorialWorkflowGit(fileTree, entry, filesList, options) {
-    const oldContentKey = entry.slug;
-    const contentKey = `${options.collectionName}-${oldContentKey}`;
-
-    const oldBranchName = this.generateBranchName(oldContentKey);
+    const contentKey = `${options.collectionName}-${entry.slug}`;
     const branchName = this.generateBranchName(contentKey);
 
     const unpublished = options.unpublished || false;
@@ -431,23 +426,12 @@ export default class API {
     } else {
       // Entry is already on editorial review workflow - just update metadata and commit to existing branch
       let newHead;
-
-      let realContentKey = contentKey,
-        realBranchName = branchName;
       return this.getBranch(branchName)
-        .catch(e => {
-          if (e instanceof APIError) {
-            realContentKey = oldContentKey;
-            realBranchName = oldBranchName;
-            return this.getBranch(oldBranchName);
-          }
-          throw e;
-        })
         .then(branchData => this.updateTree(branchData.commit.sha, '/', fileTree))
         .then(changeTree => this.commit(options.commitMessage, changeTree))
         .then(commit => {
           newHead = commit;
-          return this.retrieveMetadata(realContentKey);
+          return this.retrieveMetadata(contentKey);
         })
         .catch(e => {
           console.log(e.message, 'line-height: 30px;text-align: center;font-weight: bold');
@@ -468,8 +452,8 @@ export default class API {
            * can just finish the persist operation here.
            */
           if (options.hasAssetStore) {
-            return this.storeMetadata(realContentKey, updatedMetadata).then(() =>
-              this.patchBranch(realBranchName, newHead.sha),
+            return this.storeMetadata(contentKey, updatedMetadata).then(() =>
+              this.patchBranch(branchName, newHead.sha),
             );
           }
 
@@ -480,8 +464,8 @@ export default class API {
            */
           return this.rebasePullRequest(
             pr.number,
-            realBranchName,
-            realContentKey,
+            branchName,
+            contentKey,
             metadata,
             newHead,
           );
@@ -632,16 +616,10 @@ export default class API {
     throw Error('Editorial workflow branch changed unexpectedly.');
   }
 
-  updateUnpublishedEntryStatus(collection, slug, status) {
-    const oldContentKey = slug;
-    const contentKey = `${collection}-${slug}`;
-    let realContentKey = contentKey;
+  updateUnpublishedEntryStatus(collectionName, slug, status) {
+    const contentKey = `${collectionName}-${slug}`;
 
     return this.retrieveMetadata(contentKey)
-      .catch(() => {
-        realContentKey = oldContentKey;
-        return this.retrieveMetadata(oldContentKey);
-      })
       .catch(e => {
         console.log(e.message, 'line-height: 30px;text-align: center;font-weight: bold');
       })
@@ -649,28 +627,20 @@ export default class API {
         ...metadata,
         status,
       }))
-      .then(updatedMetadata => this.storeMetadata(realContentKey, updatedMetadata));
+      .then(updatedMetadata => this.storeMetadata(contentKey, updatedMetadata));
   }
 
-  deleteUnpublishedEntry(collection, slug) {
-    const oldContentKey = slug;
-    const contentKey = `${collection}-${slug}`;
-
-    const oldBranchName = this.generateBranchName(oldContentKey);
+  deleteUnpublishedEntry(collectionName, slug) {
+    const contentKey = `${collectionName}-${slug}`;
     const branchName = this.generateBranchName(contentKey);
-    let realBranchName = branchName;
 
     return (
       this.retrieveMetadata(contentKey)
-        .catch(() => {
-          realBranchName = oldBranchName;
-          return this.retrieveMetadata(oldContentKey);
-        })
         .catch(e => {
           console.log(e.message, 'line-height: 30px;text-align: center;font-weight: bold');
         })
         .then(metadata => this.closePR(metadata.pr))
-        .then(() => this.deleteBranch(realBranchName))
+        .then(() => this.deleteBranch(branchName))
         // If the PR doesn't exist, then this has already been deleted -
         // deletion should be idempotent, so we can consider this a
         // success.
@@ -683,24 +653,16 @@ export default class API {
     );
   }
 
-  publishUnpublishedEntry(collection, slug) {
-    const oldContentKey = slug;
-    const contentKey = `${collection}-${slug}`;
-
-    const oldBranchName = this.generateBranchName(oldContentKey);
+  publishUnpublishedEntry(collectionName, slug) {
+    const contentKey = `${collectionName}-${slug}`;
     const branchName = this.generateBranchName(contentKey);
-    let realBranchName = branchName;
 
     return this.retrieveMetadata(contentKey)
-      .catch(() => {
-        realBranchName = oldBranchName;
-        return this.retrieveMetadata(oldContentKey);
-      })
       .catch(e => {
         console.log(e.message, 'line-height: 30px;text-align: center;font-weight: bold');
       })
       .then(metadata => this.mergePR(metadata.pr, metadata.objects))
-      .then(() => this.deleteBranch(realBranchName));
+      .then(() => this.deleteBranch(branchName));
   }
 
   createRef(type, name, sha) {

@@ -23,6 +23,12 @@ From a command prompt, change your current working directory to the root of this
    git checkout master
    ```
 
+1. If you haven't done so already, install all dependencies:
+
+   ```
+   yarn bootstrap
+   ```
+
 1. Run the NPM script to login to the @rrpm org account on the https://www.npmjs.com/ package manager site:
 
    ```
