@@ -225,13 +225,12 @@ export default class API {
       .then(files => files.filter(file => file.type === 'file'));
   }
 
-  readUnpublishedBranchFile(slug, collection) {
+  readUnpublishedBranchFile(slug, collection = null, contentKey = null) {
     try {
-      collection = typeof collection === 'undefined' ? null : collection;
-      console.log('NC GitHub: readUnpublishedBranchFile()', { slug, collection });
+      console.log('NC GitHub: readUnpublishedBranchFile()', { slug, collection, contentKey });
     } catch (e1) {}
 
-    const contentKey = collection ? `${collection.get('name')}-${slug}` : slug;
+    contentKey = contentKey || (collection ? `${collection.get('name')}-${slug}` : slug);
     const metaDataPromise = this.retrieveMetadata(contentKey)
       .catch(e => {
         try {

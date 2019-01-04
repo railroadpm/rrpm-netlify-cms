@@ -185,8 +185,8 @@ export default class GitHub {
         branches.map(branch => {
           promises.push(
             new Promise(resolve => {
-              // const slug = branch.ref.split('refs/heads/cms/').pop();
-              const slug = branch.ref.split('-').pop();
+              const contentKey = branch.ref.split('refs/heads/cms/').pop();
+              const slug = contentKey.split('-').pop();
 
               try {
                 console.log('NC GitHub: unpublishedEntries() Branches', { slug, collections, branch });
@@ -194,7 +194,7 @@ export default class GitHub {
 
               return sem.take(() =>
                 this.api
-                  .readUnpublishedBranchFile(slug)
+                  .readUnpublishedBranchFile(slug, null, contentKey)
                   .then(data => {
                     if (data === null || data === undefined) {
                       resolve(null);
